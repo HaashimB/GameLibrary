@@ -7,13 +7,6 @@ import repository.GameRepository;
 
 import java.util.List;
 
-@Service
-public class GameService {
-
-    @Autowired
-    private GameRepository gameRepository;
-
-    public List<Game> findAll() {
-        return (List<Game>) gameRepository.findAll();
-    }
+public interface GameServiceIF {
+    public List<Game> findAll();
 }

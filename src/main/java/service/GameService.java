@@ -1,4 +1,19 @@
 package service;
 
-public class GameService {
+import bean.Game;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import repository.GameRepository;
+
+import java.util.List;
+
+@Service
+public class GameService implements GameServiceIF {
+
+    @Autowired
+    private GameRepository gameRepository;
+
+    public List<Game> findAll() {
+        return (List<Game>) gameRepository.findAll();
+    }
 }
