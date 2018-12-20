@@ -1,29 +1,18 @@
-package bean;
+package com.example.bean;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "GAMES")
 public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     private String title;
     private String description;
 
-    public Game(Long id, String title, String description){
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTitle() {
