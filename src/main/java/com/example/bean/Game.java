@@ -7,9 +7,13 @@ public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
     private String title;
     private String description;
+
+    public Game(){
+
+    }
 
     public Integer getId() {
         return id;
