@@ -8,11 +8,20 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
     private String name;
     private String password;
 
-    public Integer getId() {
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+
+    public User() {
+
+    }
+
+    public int getId() {
         return id;
     }
 
