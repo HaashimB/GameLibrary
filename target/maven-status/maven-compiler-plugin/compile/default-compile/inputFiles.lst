@@ -1,3 +1,10 @@
-/home/hash/IdeaProjects/GameLibrary/src/main/java/hello/Greeting.java
-/home/hash/IdeaProjects/GameLibrary/src/main/java/hello/Application.java
-/home/hash/IdeaProjects/GameLibrary/src/main/java/hello/GreetingController.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/repository/GameRepository.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/manager/UserGamesManager.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/bean/Game.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/repository/UserGamesRepository.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/controller/GameController.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/Application.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/repository/UserRepository.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/bean/User.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/controller/UserController.java
+/home/hash/IdeaProjects/GameLibrary/src/main/java/com/example/bean/UserGames.java

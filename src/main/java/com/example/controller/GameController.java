@@ -9,7 +9,7 @@ import com.example.repository.GameRepository;
 
 
 @Controller
-@RequestMapping(path="/game")
+@RequestMapping(path="/game", method = {RequestMethod.GET, RequestMethod.DELETE})
 public class GameController {
 
     @Autowired
@@ -27,5 +27,11 @@ public class GameController {
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Game>getAllGames(){
         return gameRepository.findAll();
+    }
+
+    @DeleteMapping("/remove/{gameId}")
+    public String removeGame(@PathVariable int gameId) {
+        gameRepository.deleteById(gameId);
+        return "\n *** Deleted Game *** \n";
     }
 }
