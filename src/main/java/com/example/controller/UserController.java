@@ -50,4 +50,15 @@ public class UserController {
         return userGamesManager.getUserGames(userId);
     }
 
+    @GetMapping(path="/login")
+    public @ResponseBody String login(@RequestParam String username, @RequestParam String password) {
+        System.out.println("reached endpoint");
+        User u = userRepository.findUserByName(username);
+        if(u.getPassword().equals(password)){
+            return "Success";
+        }else{
+            return("incorrect log in details");
+        }
+    }
+
 }
