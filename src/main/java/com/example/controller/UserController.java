@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @RequestMapping(path="/user")
 public class UserController {
@@ -48,6 +51,17 @@ public class UserController {
     @GetMapping(path="/games")
     public @ResponseBody Iterable<Game> getUserGames(@RequestParam int userId) {
         return userGamesManager.getUserGames(userId);
+    }
+
+    @GetMapping(path="/login")
+    public @ResponseBody String login(@RequestParam String username, @RequestParam String password) {
+        System.out.println("reached endpoint");
+        User u = userRepository.findUserByName(username);
+        if(u.getPassword().equals(password)){
+            return "Success";
+        }else{
+            return("incorrect log in details");
+        }
     }
 
 }
